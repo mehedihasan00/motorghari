@@ -1,0 +1,46 @@
+{
+  "name": "mgfront",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "sir4ju1 <rianaville@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "bulma": "^0.7.1",
+    "cookie": "^0.3.1",
+    "dotenv": "^5.0.1",
+    "flickity": "^2.1.0",
+    "fuzzy-search": "^2.1.0",
+    "isomorphic-fetch": "^2.2.1",
+    "js-cookie": "^2.2.0",
+    "moment": "^2.21.0",
+    "nuxt": "^1.4.0",
+    "rxjs": "^5.5.7",
+    "v-toaster": "^1.0.3",
+    "vue-jstree": "^2.1.6",
+    "vue-lazyload": "^1.2.2",
+    "vue-rx": "^5.0.0",
+    "vue-select": "^2.4.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1"
+  },
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0"
+    }
+  }
+}

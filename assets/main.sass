@@ -1,0 +1,600 @@
+$main_bg: #000a12
+$font_nunito: 'Nunito', sans-serif
+$color_yellow: #ffd83d
+$color_orange: #ff3e0a 
+
+body
+  background: $main_bg
+  font-family: $font_nunito
+
+h1, h2, h3
+  font-family: $font_nunito
+
+.main
+  padding-bottom: 4rem
+
+.company-name
+  padding: .25rem 0
+  justify-content: center
+  font-size: 2rem
+  color: $color_yellow
+  display: flex
+  a
+    line-height: 0
+    img
+      height: 52px
+
+.company-name-style
+  background-color: $color_yellow
+  color: black
+  padding: 0 .3rem
+  line-height: 2.5rem
+  font-weight: 700
+  border-radius: .2rem
+
+@media only screen and (min-width: 1600px)
+  .page
+    max-width: 1540px
+
+@media only screen and (max-width: 1366px)
+  .page
+    max-width: 1340px
+
+.page
+  margin: auto
+  border-radius: .8rem
+  overflow: hidden
+
+.nav-main
+  background-color: #263238
+  height: 3.5rem
+  .nav-icon
+    color: $color_yellow
+    font-size: 2rem
+    cursor: pointer
+  .level
+    padding: 0
+    margin: 0
+    height: 3.5rem
+    .level-item
+      height: 3.5rem
+      padding: 0 1rem
+      background-color: #40494e
+      padding: 0 1rem
+      min-width: 5rem
+
+.level-item.slant
+  transform: skewX(-30deg)
+  border-right: 3px solid $color_yellow
+  .nav-icon
+    transform: skewX(30deg)
+
+.dropdown-menu.cart
+  top: 4rem
+  display: inline-block
+  visibility: hidden
+  opacity: 0
+  transform: scale(0.2)
+  transform-origin: top right
+  transition: .3s ease
+  .dropdown-content
+    background-color: #263238
+  &.visible
+    visibility: visible    
+    top: 8.05rem
+    opacity: 1
+    transform: scale(1)
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+
+.dropdown-menu.login-menu
+  top: 4rem
+  display: inline-block
+  visibility: hidden
+  opacity: 0
+  transform: scale(0.2)
+  transform-origin: top right
+  transition: .3s ease
+  .dropdown-content
+    background-color: #263238
+  &.visible
+    visibility: visible
+    opacity: 1
+    transform: scale(1)
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+
+@media only screen and (min-width: 1500px)
+  .dropdown-menu.cart
+    left: 69%
+  .dropdown-menu.login-menu
+    left: 69%
+
+@media only screen and (max-width: 1500px)
+  .dropdown-menu.cart
+    left: 67.8%
+  .dropdown-menu.login-menu
+    left: 67.8%
+@media only screen and (max-width: 700px)
+  .dropdown-menu.cart
+    left: inherit
+  .dropdown-menu.login-menu
+    left: inherit
+
+.dropdown-item.drowdown-cart
+  width: 20rem
+
+.cart-item-line
+  color: white
+  display: flex
+  padding: .3rem 0
+  margin-bottom: .3rem
+  border-bottom: 1px solid #ffd83d
+  &.total
+    border-bottom: none
+    margin-bottom: 1rem
+    span
+      margin-right: 1rem
+      font-weight: 600
+
+.cart-item-name
+  flex: 2
+
+.cart-item-price
+  flex: 2
+  text-align: right
+
+.dropdown-item.drowdown-cart button
+  margin-left: .5rem
+
+.search-box
+  background: url(/img/middleimage.jpg)
+  background-position: center
+  background-size: cover
+  height: 13.5rem
+  .container
+    height: 100%
+
+@media only screen and (max-width: 700px)
+  .search-box
+    .container
+      padding: 0 .2rem
+.search-bar
+  max-width: 40rem
+  display: flex
+  padding: .3rem
+  background-color: white
+  box-shadow: 0 0 6px #999
+  border-radius: .3rem
+  margin: auto
+  position: relative
+  top: 58%
+  .search-part
+    flex: 6
+    border-right: 1px solid #eee
+  .search-brand
+    flex: 3
+  .search-button
+    flex: 1
+  input
+    width: 100%
+    height: 100%
+    border: inherit
+    padding-left: .5rem
+    font-size: 0.9rem
+    &:focus
+      outline: none
+  a
+    color: $color_yellow
+    font-size: 1.5rem
+    padding: 0 1rem
+    float: right
+
+.inner-body
+  background-color: white
+  padding-bottom: 3rem
+
+.home-parts.container
+  position: relative
+  top: -2.3rem
+  height: 96px
+  overflow: hidden
+  box-shadow: 0 4px 6px -2px #c1c1c1
+  background-color: #e4e4e4aa
+  border-radius: .6rem
+@media only screen and (max-width: 700px)
+  .home-parts.container
+    margin: 0 .8rem
+
+.parts-image-box 
+  padding: .5rem 
+  .parts-image
+    background-color: #fdfdfd
+    max-width: 5rem
+    min-width: 5rem
+    width: 5rem
+    height: 5rem
+    border-radius: .3rem
+    box-shadow: 0 0 4px #aaa
+    text-align: center
+    margin: 0 .2rem
+    overflow: hidden
+    .helper
+      height: 5rem
+    img
+      vertical-align: middle
+  .selected
+    .parts-image img
+      animation-name: partsbounceIn
+      animation-duration: 2s
+      animation-iteration-count: infinite
+      animation-fill-mode: both
+      animation-direction: alternate
+@keyframes partsbounceIn
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to
+    animation-timing-function: ease-in
+
+  0%
+    opacity: 0.5
+    transform: scale3d(0.8, 0.8, 0.8)
+
+  20%    
+    opacity: 1
+    transform: scale3d(1.1, 1.1, 1.1)
+
+  40%
+    transform: scale3d(0.9, 0.9, 0.9)
+
+  60%
+    transform: scale3d(1.03, 1.03, 1.03)
+
+  80%
+    transform: scale3d(0.97, 0.97, 0.97)
+  to
+    transform: scale3d(1, 1, 1)
+
+
+.parts-image, .brand-image, .product-image
+  .helper
+    display: inline-block
+    vertical-align: middle
+
+.parts-section
+  margin-top: 3.5rem
+  margin-bottom: 3.5rem
+  .shadowed
+    background-image: url(/img/parts.jpg)
+    background-position-x: center
+    background-color: #eeeeee70
+    padding: 2rem 0
+
+
+
+.part-image img
+  max-width: 6.5rem
+  max-height: 6.5rem
+  vertical-align: middle
+
+
+.brands-section
+  margin-bottom: 2.5rem
+  margin-top: .5rem
+  .shadowed
+    background-image: url(/img/cars.jpg)
+    background-position-x: center
+    background-color: #eeeeee70
+    padding: 2rem 0
+
+.brands-image-box
+  height: 7rem
+  border-radius: .3rem
+  background-color: rgba(125, 125, 125, 0.35)
+  box-shadow: 0 0 10px -2px #f3f2f2
+  padding: .25rem
+  overflow: hidden
+  .brand-image
+    background-color: #fdfdfd
+    max-width: 6.5rem
+    min-width: 6.5rem
+    width: 6.5rem
+    height: 6.5rem
+    border-radius: .3rem
+    box-shadow: 0 0 1px #ddd
+    text-align: center
+    margin: 0 .2rem
+    overflow: hidden
+    .helper
+      height: 6.5rem
+
+.brand-image img
+  max-width: 6.5rem
+  max-height: 6.5rem
+  vertical-align: middle
+  cursor: pointer
+
+.special-service
+  padding: 0 .5rem
+  margin-top: .5rem
+
+.special-section
+  margin-bottom: 3.5rem
+  .column
+    padding: .15rem
+
+
+.special-box
+  color: white
+  background-size: cover
+  background-color: #26323850
+  background-blend-mode: multiply
+  &.red
+    background-image: url(https://image.freepik.com/free-photo/workers-comparing-graphics_1150-172.jpg)
+    height: 12.3rem
+    border-top-left-radius: .5rem
+    border-top-right-radius: .5rem
+    .special-title
+      top: 0
+  &.new
+    background-image: url(https://image.freepik.com/free-photo/mechanic-repairing-a-bicycle_1170-2431.jpg)
+    height: 18rem
+    border-bottom-left-radius: .5rem
+    border-bottom-right-radius: .5rem
+    .special-title
+      top: 5.5rem
+    .special-subtitle
+      position: relative
+      top: 5.5rem
+
+  .icon-holder
+    color: #dddddd60
+    font-size: 4rem
+    margin-left: 2rem
+    transition: 0.4s ease
+  .special-title
+    font-family: 'Nunito', sans-serif
+    font-size: 2rem
+    margin-right: 2rem
+    line-height: 2rem
+    transition: 0.4s ease
+    text-align: right
+    position: relative
+  .special-subtitle
+    margin-right: 2rem
+    opacity: 1
+    text-align: right
+    transition: 0.4s ease
+  &:hover
+    .icon-holder
+      font-size: 6rem
+      margin-bottom: 0
+      transition: 0.5s ease
+    .special-title
+      font-size: 2.4rem
+      transition: 0.5s ease
+    .special-subtitle
+      opacity: 0
+      display: none
+      transition: 0.5s ease
+  &.red:hover 
+    .special-title
+      top: -1.5rem
+  &.new:hover
+    .special-title
+      top: 4.2rem
+
+
+.service-section
+  margin-bottom: 3.5rem
+  .column
+    padding: .15rem
+  .shadowed
+    background-color: #eeeeee70
+  .service-box
+    height: 10rem
+    border-radius: .5rem
+    background-color: rgb(33, 33, 33)
+    overflow: hidden
+    background-color: #26323850
+    background-blend-mode: multiply
+    color: white
+
+.service-box
+  .service-title
+    font-family: 'Nunito', sans-serif
+    margin-left: 2rem
+    font-size: 2rem
+    line-height: 2rem
+    padding: 1rem 0
+    transition: 0.3s ease-out
+  a
+    color: $color_orange
+    font-size: 1.5rem
+    background-color: #ffdb4a
+    padding: 1.3rem 1.6rem
+    border-radius: 40rem
+    position: relative
+    top: -2rem
+    left: 75%
+    transition: 0.3s ease
+  &:hover
+    .service-title
+      font-size: 1.4rem
+      transition: 0.3s ease
+    a
+      top: -3rem
+      left: 30%
+      border-radius: 80rem
+      padding: 12rem
+      font-size: 3rem
+      opacity: .5
+      transition: 0.3s ease-in-out
+
+.product-box
+  background-color: #f9f9f9
+  border-radius: .3rem
+  box-shadow: 0 1px 5px #ddd
+  overflow: hidden
+  .product-image
+    height: 12rem
+    position: relative
+    overflow: hidden
+    background-color: #fdfdfd
+    text-align: center
+    .helper
+      height: 12rem
+
+.product-image img
+  height: 100%
+  vertical-align: middle
+  transition: 0.3s ease-out
+
+.product-box
+  .product-image:hover img
+    transform: scale(1.2)
+    transition: 0.3s ease-in
+  .details
+    height: 7rem
+  p
+    padding-left: .5rem
+    font-size: .7rem
+  .product-title
+    font-family: 'Nunito', sans-serif
+    color: #555
+    font-size: 1.2rem
+    font-weight: 600
+    padding-left: .5rem
+    padding-top: .5rem
+  .price-tag
+    color: $color_orange
+    font-size: 1.5rem
+    padding: .5rem
+
+.product-cart
+  height: 4rem
+
+.product-box .round-button
+  width: 3.5rem
+  height: 3.5rem
+  border-radius: 30rem
+  font-size: 1.2rem
+  color: $color_orange
+  box-shadow: 0 0 4px #cace00
+  float: right
+  margin-right: .4rem
+  transition: 0.3s ease-in
+  &:hover
+    color: white
+    font-size: 1.5rem
+    transition: 0.3s ease-in
+
+/**
+ ** PRODUCT PAGE CSS
+
+.search-header-box
+  border-left: 3px solid #4f5b62
+  border-right: 3px solid #4f5b62
+
+.search-header input
+  font-size: 0.9rem
+  background-color: #40494e
+  border: none
+  height: 3rem
+  color: #eee
+  width: 0rem
+  transition: 0.3s ease-in
+  &[value]:not([value=""])
+    width: 15rem
+    margin-right: .3rem
+
+.search-header-box:hover input
+  width: 15rem
+  margin-right: .3rem
+  transition: 0.3s ease-out
+
+.search-header
+  input:focus
+    width: 15rem
+    margin-right: .3rem
+    transition: 0.3s ease-out
+    outline: none
+  i
+    color: $color_yellow
+    margin-left: -.3rem
+    font-size: 1.3rem
+    position: relative
+    top: 0.1rem
+
+.search-title-box
+  height: 6rem
+  background: url(/img/middleimage.jpg)
+  background-size: cover
+  background-position: center
+  color: white
+  display: table
+  width: 100%
+  position: relative
+  z-index: 0
+  &:before
+    content: ""
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0px
+    width: 100%
+    z-index: -1
+    filter: blur(2px)
+    background: url(/img/middleimage.jpg)
+    background-position: center
+    background-size: cover
+  .text-container
+    display: table-cell
+    vertical-align: top
+    filter: drop-shadow(1px 1px 1px #444)
+  .parts-searched
+    font-size: 2rem
+  .parts-searched-title
+    font-size: 2.5rem
+
+.breadcrumb-box
+  height: 4rem
+  background-color: #e4e4e4aa
+  border-width: .3rem
+  border-top: 0
+  border-radius: .6rem
+  margin-bottom: 1.5rem
+  box-shadow: 0 4px 6px -2px #c1c1c1
+  overflow: hidden
+  position: relative
+  top: -1.5rem
+  .breadcrumb-text 
+    font-size: 1.1rem
+    padding: 0 1rem
+    text-shadow: 0 0 1px #aaa
+    background: #ffffffee
+    line-height: 3rem
+    margin: .5rem
+    border-radius: .4rem
+    box-shadow: 0 0 1px 0 #bfbfbf
+    span
+      margin: 0 .3rem
+@media only screen and (max-width: 700px)
+  .breadcrumb-box
+    margin-left: 0.6rem
+    margin-right: 0.6rem
+
+.filter-card
+  background-color: #f8f8f8
+  border-radius: .2rem
+  padding: 1rem
+  box-shadow: 0 0 2px #ccc
+  .filter-title
+    font-size: 1.2rem
+
+
+footer
+  background-color: white
+  padding-top: 3rem
+  padding-bottom: 3rem
